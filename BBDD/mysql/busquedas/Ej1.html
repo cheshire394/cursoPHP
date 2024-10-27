@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario ejercicio 1</title>
+    <style>
+        /* Estilos para el cuerpo de la página */
+        body {
+            font-family: Arial, sans-serif; /* Establece la fuente del texto */
+            background-color: #f1e896; /* Color de fondo de la página */
+            display: flex; /* Usa flexbox para centrar el formulario */
+            justify-content: center; /* Centra horizontalmente */
+            align-items: center; /* Centra verticalmente */
+            height: 100vh; /* Ocupa toda la altura de la ventana */
+            margin: 0; /* Elimina márgenes predeterminados */
+        }
+        /* Estilos para el formulario */
+        form {
+            background-color: #fff; /* Color de fondo del formulario */
+            padding: 20px; /* Espaciado interno del formulario */
+            border-radius: 8px; /* Bordes redondeados */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del formulario */
+            max-width: 400px; /* Ancho máximo del formulario */
+            width: 100%; /* Ancho del formulario al 100% del contenedor */
+        }
+        /* Estilos para el encabezado del formulario */
+        h1 {
+            font-size: 24px; /* Tamaño de la fuente del encabezado */
+            margin-bottom: 20px; /* Espacio debajo del encabezado */
+        }
+        /* Estilos para las etiquetas */
+        label {
+            display: block; /* Hace que las etiquetas ocupen toda la línea */
+            margin-bottom: 8px; /* Espacio debajo de las etiquetas */
+            font-weight: bold; /* Hace que el texto sea negrita */
+        }
+        /* Estilos para los campos de texto y número */
+        input[type="text"], input[type="number"] {
+            width: 100%; /* Hace que los campos ocupen el ancho completo */
+            padding: 8px; /* Espaciado interno de los campos */
+            margin-bottom: 20px; /* Espacio debajo de los campos */
+            border: 1px solid #ccc; /* Borde de los campos */
+            border-radius: 4px; /* Bordes redondeados */
+        }
+        /* Estilos para el botón de enviar */
+        input[type="submit"] {
+            background-color: #4CAF50; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            padding: 10px 15px; /* Espaciado interno del botón */
+            border: none; /* Sin borde */
+            border-radius: 4px; /* Bordes redondeados */
+            cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+        }
+        /* Estilos para el botón de enviar cuando se pasa el cursor sobre él */
+        input[type="submit"]:hover {
+            background-color: #45a049; /* Color de fondo del botón al pasar el cursor */
+        }
+    </style>
+</head>
+<body>
+    <form action="Ej1.php" method="get" name="ej1">
+        <h1>Rellena los filtros de búsqueda:</h1>
+        <label for="apellido">Nombre empleado:</label>
+        <input type="text" name="apellido" id="apellido">
+
+        <label for="emp_no">Código empleado:</label>
+        <input type="text" name="emp_no" id="emp_no">
+
+        <label for="oficio">Oficio empleado:</label>
+        <input type="text" name="oficio" id="oficio">
+
+        <label for="salario">Salario empleado:</label>
+        <input type="number" name="salario" id="salario">
+
+        <input type="submit" value="Buscar">
+    </form>
+</body>
+</html>

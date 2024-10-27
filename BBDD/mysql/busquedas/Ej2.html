@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BusquedasEj2</title>
+
+    <style>
+        /* General */
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size: 18px;
+            background-color: rgb(248, 248, 168);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Añade una sombra sutil al texto */
+        }
+
+        header{
+            background-color: rgb(95, 72, 72);
+            width: 100%;
+            height: 80px; /* Ajusta la altura del header y footer */
+            display: flex;
+            justify-content: center;
+            align-items:center; 
+        }
+
+        #title {
+            color: rgb(243, 243, 161);
+            text-align: center;
+            margin: 0;
+            font-size: 24px; /* Ajusta el tamaño del texto */
+            padding: 10px 0; /* Añade un padding superior e inferior */
+        }
+
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 20px;
+        }
+
+        form {
+            background-color: rgb(158, 139, 139);
+            border-radius: 15px;
+            padding: 20px; /* Padding uniforme */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Añade una sombra al formulario */
+            max-width: 400px; /* Ancho máximo del formulario */
+            width: 300%; /* Asegura que el formulario use el ancho máximo permitido */
+            box-sizing: border-box; /* Incluye padding y borde en el ancho total */
+        }
+
+        label {
+            display: block;
+            margin-top: 10px; /* Espacio entre las etiquetas */
+            font-weight: bold; /* Texto en negrita */
+            color: rgb(95, 72, 72); /* Color de texto de las etiquetas */
+        }
+
+        input, select {
+            display: block;
+            width: calc(100% - 22px); /* Ajustar ancho para incluir padding y borde */
+            margin-top: 5px; /* Espacio entre los elementos */
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            font-size: 16px; /* Ajusta el tamaño de la fuente */
+        }
+
+        input[type="submit"] {
+            background-color: rgb(95, 72, 72);
+            color: white;
+            border: none;
+            cursor: pointer; /*cambia la flecha por una mano*/
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: rgb(80, 60, 60); /* Color más oscuro al pasar el ratón sobre el botón */
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="title">MOSTRAR DATOS FILTRADOS DE EMPLEADOS</h1>
+    </header>
+
+    <main>
+        <form action="Ej2.php" method="get">
+            <label for="apellido">Apellido:</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Escribe el apellido...">
+            
+            <label for="emp_no">Número Empleado:</label>
+            <input type="text" name="emp_no" id="emp_no" placeholder="Ejemplo: 1234">
+            
+            <label for="oficio">Oficio:</label>
+            <select id="oficio" name="oficio">
+                <option value="null" selected>--Sin seleccionar--</option>
+                <option value="empleado">Empleado</option>
+                <option value="vendedor">vendedor</option>
+                <option value="director">Director</option>
+                <option value="analista">Analista</option>
+                <option value="presidente">Presidente</option>
+            </select>
+            
+            <label for="salario">Salario:</label>
+            <input type="number" id="salario" name="salario" max="10000" min="1000" step="1000" value="1000">
+            
+            <input type="submit" value="Enviar">
+        </form>
+    </main>
+
+    
+</body>
+</html>

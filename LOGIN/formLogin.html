@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formLOGIN</title>
+
+
+    <style>
+
+        body{
+         
+            margin-left: 40%; /*centrar todos los elementos del body*/
+            margin-top: 15%;
+            background-color: rgb(243, 243, 192);
+          
+          
+        }
+        h1{
+            color:rgb(240, 76, 103);
+            text-shadow: 1px 1px 2px rgba(82, 80, 80, 1); /* Sombra sutil */
+            font-family: Arial, sans-serif; /* Familia tipográfica */
+            padding-bottom: 20px;
+        }
+
+     
+        fieldset{
+
+            /*Caja*/
+            background-color: rgb(253, 169, 183);
+            border-radius: 10px;
+            padding: 35px;
+
+            /*letra*/
+            color: rgb(68, 68, 68); 
+            font-weight: bold;
+            font-size: 17px;
+            
+
+            /*para que ocupe todo el contenido*/
+            display: inline-block; /* Hace que el contenedor ajuste su tamaño al contenido */
+            max-width: 100%; /* El ancho máximo no excederá el 100% del contenedor padre */
+           
+           
+          
+
+        }
+
+        legend{
+            font-size: 20px;
+            background-color: rgb(240, 76, 103);
+            border-radius: 8px;
+            padding: 15px;
+        }
+
+        button{
+            background-color: rgb(240, 76, 103);
+            border-radius: 3px;
+            padding: 8px;
+            margin-top: 20px;
+            margin-right: 4px;
+            color: rgb(68, 68, 68); 
+            font-weight: bold;
+          
+            
+        }
+
+         /* Estilo del botón cuando el cursor pasa sobre él */
+        button:hover{
+            background-color: rgb(253, 169, 183); /* Color de fondo más oscuro */
+            color: #000; /* Color del texto negro */
+            transform: translate(2px, 2px); /* Desplaza el botón hacia abajo y a la derecha */
+        }
+
+         /* Efecto cuando el botón está siendo presionado */
+         button:active {
+            transform: translate(4px, 4px); /* Desplaza más el botón hacia abajo y a la derecha */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Sombra más sutil cuando está presionado */
+            background-color: rgb(240, 76, 103);
+        }
+
+        label, input{
+          
+            padding: 4px;
+            margin: 4px;
+        }
+
+
+    </style>
+
+</head>
+<body>
+    
+    <h1>Conectar a login</h1>
+
+    <form method="post" action="1login.php">
+
+    <fieldset>
+
+        <legend>Introduce los datos de usuario: </legend>
+
+        <labelfor="username">Usuario: </label>
+        <input type="text" id="username" name="username">
+        <br>
+        <labelfor="password">Contraseña: </label>
+        <input type="password" id="password" name="password">
+
+        <br>
+        <button type="submit" id="Conectar" name="conectar">Conectar</button>
+        <button type="reset">restablecer</button>
+
+
+
+
+    </fieldset>
+    </form>
+</body>
+</html>
